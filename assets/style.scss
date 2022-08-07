@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+body {
+    background-color: #141519;
+}
+* {
+    padding:0;margin:0;
+    box-sizing: border-box;
+
+}
+
+.card {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #1F2630;
+    width: 500px;
+    height: 540px;
+    display: flex;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: 1440px){
+        width: 400px;
+        height: 440px;
+    }
+    @media only screen and (max-width: 800px){
+        width: 350px;
+        height: 380px;
+    }
+    .content{
+        width: 80%;
+        height: 80%;
+        border: 1px solid unset;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        @media only screen and (max-width: 800px){
+            width: 90%;
+            height: 90%;
+        }
+        .logo {
+            width: 100%;
+            height: 13%;
+            border: 1px solid unset;
+            @media only screen and (max-width: 800px){
+                height: 15%;
+            }
+            .star-logo {
+                height: 50px;
+                border: 1px solid unset;
+                width: 50px;
+                display: flex;
+                border-radius: 50%;
+                justify-content: center;
+                align-items: center;
+                background-color: #262F38;
+                text-align: center;
+            }
+        }
+        .question{
+            color: #FEFFFF;
+            height: 10%;
+            border: 1px solid unset;
+            font-family: 'Overpass';
+            font-size: 2.5rem;
+            font-weight: 700;
+            @media only screen and (max-width: 1440px){
+                font-size: 2rem;
+            }
+            @media only screen and (max-width: 800px){
+                height:12%;
+            }
+        }
+        .help {
+            color: #717882;
+            border: 1px solid unset;
+            height: 28%;
+            font-family: 'Overpass';
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 30px;
+            @media only screen and (max-width: 1440px){
+                font-size: 1rem;
+                height: 25%;
+            }
+        }
+        .ratings{
+            display: flex;
+            width: 100%;
+            border: 1px solid unset;
+            height: 20%;
+            justify-content: space-between;
+            @media only screen and (max-width: 800px){
+                height: 18%;
+            }
+            .rating2 {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background-color: #7C8898;
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                color: #FEFFFF;
+                @media only screen and (max-width: 1440px){
+                    width: 60px;
+                    height: 60px;
+                }
+                @media only screen and (max-width: 800px){
+                    width: 55px;
+                    height: 55px;
+                }
+                span {
+                    font-family: 'Overpass';
+                    font-size: 1.3rem;
+                    color: white;
+                    font-weight: 700;
+                    margin-top: 0.26em;
+                    margin-right: 0.1em;
+                    @media only screen and (max-width: 1440px){
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .rating {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background-color: #262F38;
+                display: flex;
+                position: relative;
+                align-items: center;
+                justify-content: center;
+                color: #717882;
+                @media only screen and (max-width: 1440px){
+                    width: 60px;
+                    height: 60px;
+                }
+                @media only screen and (max-width: 800px){
+                    width: 55px;
+                    height: 55px;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background-color: #FC7613;
+                    color: #ffffff;
+                }
+                span {
+                    font-family: 'Overpass';
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                    margin-top: 0.26em;
+                    margin-right: 0.1em;
+                    @media only screen and (max-width: 1440px){
+                        font-size: 1.15rem;
+                    }
+                }
+            }
+        }
+        .button {
+            height: 13%;
+            width: 100%;
+            display: flex;
+            border: 1px solid unset;
+            justify-content: center;
+            align-items: center;
+            @media only screen and (max-width: 1440px){
+                height: 12.2%;
+            }
+            button:disabled,
+            button[disabledButton] {
+                background-color: #262F38;
+                color: #ffffff;
+                padding: 0em 0;
+                border-radius: 28px;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                font-family: 'Overpass';
+                font-size: 1.45rem;
+                @media only screen and (max-width: 1440px){
+                    font-size: 1rem;
+                }
+                &:hover {
+                    cursor: default;
+                    background-color: #262F38;
+                    color:#FEFFFF;
+                }
+            }
+            button{
+                background-color: #FC7613;
+                width: 100%;
+                color: white;
+                padding: 0em 0;
+                border-radius: 28px;
+                border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                font-family: 'Overpass';
+                font-size: 1.45rem;
+                @media only screen and (max-width: 1440px){
+                    font-size: 1rem;
+                }
+                &:hover {
+                    cursor: pointer;
+                    background-color: white;
+                    color:#FC7613;
+                }
+            }
+        }
+    }
+    .thank-you {
+        width: 80%;
+        height: 80%;
+        border: 1px solid unset;
+        display: none;
+        justify-content: space-between;
+        flex-direction: column;
+        .ilustrator-thank-you {
+            height: 25%;
+            width: 100%;
+            text-align: center;
+            @media only screen and (max-width: 800px){
+                height: 35%;
+            }
+        }
+        .ratings-count {
+            border: 1px solid unset;
+            height: 18%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media only screen and (max-width: 800px){
+                height: 25%;
+            }
+
+            .rate {
+                background-color: #262F38;
+                font-family: 'Overpass';
+                text-align: center;
+                margin-top: 2em;
+                font-size: 1.25rem;    
+                width: 65%;
+                color: #FC7613;
+                border-radius: 30px;
+                padding: 0.85em 0 0.65em 0;
+                @media only screen and (max-width: 1440px){
+                    font-size: 1rem;    
+                    width: 60%;
+                }
+                @media only screen and (max-width: 800px){
+                    font-size: 1rem;    
+                    width: 70%;
+                }
+            }
+        }
+        .title-thankyou {
+            border: 1px solid unset;
+            height: 15%;
+            color: white;
+            font-family: 'Overpass';
+            font-size: 1.9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media only screen and (max-width: 1440px){
+                font-size: 1.3rem;    
+            }
+            @media only screen and (max-width: 800px){
+                height: 20%;
+                font-size: 1.3rem;    
+            }
+        }
+        .text {
+            height: 30%;
+            border: 1px solid unset;
+            font-family: 'Overpass';
+            font-size: 1.5rem;
+            color: #717882;
+            text-align: center;
+            @media only screen and (max-width: 1440px){
+                font-size: 1.2rem;    
+            }
+            @media only screen and (max-width: 800px){
+                font-size: 1.1rem;    
+                height: 23%;
+            }
+        }
+    }
+}
